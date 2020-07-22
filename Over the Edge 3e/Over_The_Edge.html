@@ -1,0 +1,115 @@
+<div class='background'>
+<div class='slantrow'>
+	<div class='col'>
+		<label data-i18n="character-label">CHARACTER</label>
+		<input type='text' name='attr_character_name' />
+	</div>
+	<div class='col'>
+		<button type='roll' value='&{template:overtheedge} {{name=@{character_name}}} {{d1=[[1d6cs4cf3]]}} {{d2=[[1d6cs4cf3]]}}' data-i18n="roll-label">Cast Your Lots</button>
+	</div>
+</div>
+<div class='row'>
+	<label data-i18n="qmark-label">QUESTION MARK</label>
+	<input type='text' name='attr_qmark' />
+</div>
+<div class='row'>
+	<label data-i18n="maintrait-label">MAIN TRAIT</label>
+	<textarea name='attr_maintrait'></textarea>
+</div>
+<div class='row'>
+	<label data-i18n="sidetrait-label">SIDE TRAIT</label>
+	<textarea name='attr_sidetrait'></textarea>
+</div>
+<div class='4colrow'>
+	<div class='col'>
+		<label data-i18n="level-label">LEVEL</label>
+		<input type='text' name='attr_level' />
+	</div>
+	<div class='col'>
+		<label data-i18n="fight-label">FIGHT</label>
+		<input type='text' name='attr_fight' />
+	</div>
+	<div class='col'>
+		<label data-i18n="sway-label">SWAY</label>
+		<input type='text' name='attr_sway' />
+	</div>
+	<div class='col'>
+		<label data-i18n="weird-label">WEIRD</label>
+		<input type='text' name='attr_weird' />
+	</div>
+</div>
+<div class='row'>
+	<label data-i18n="trouble-label">TROUBLE</label>
+	<textarea name='attr_trouble'></textarea>
+</div>
+<div class='row'>
+	<label data-i18n="details-label">DETAILS AND NOTES</label>
+	<textarea name='attr_details'></textarea>
+</div>
+<div class='row'>
+	<label data-i18n="strikes-label">STRIKES</label>
+	<label>1</label>
+	<textarea name='attr_strike1'></textarea>
+	<label>2</label>
+	<textarea name='attr_strike2'></textarea>
+</div>
+
+</div>
+<rolltemplate class="sheet-rolltemplate-overtheedge">
+<table>
+	<caption class="sheet-template-header">{{name}}</caption>
+	<tbody>
+	<tr><td class="sheet-template-row">{{d1}} + {{d2}}</td></tr>
+	<tr><td class="sheet-template-total">
+	{{#rollTotal() d1 1}}
+		{{#rollTotal() d2 1}}2{{/rollTotal() d2 1}}
+		{{#rollTotal() d2 2}}3{{/rollTotal() d2 2}}
+		{{#rollTotal() d2 3}}4</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 3}}
+		{{#rollTotal() d2 4}}5</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 4}}
+		{{#rollTotal() d2 5}}6{{/rollTotal() d2 5}}
+		{{#rollTotal() d2 6}}7{{/rollTotal() d2 6}}
+	{{/rollTotal() d1 1}}
+	{{#rollTotal() d1 2}}
+		{{#rollTotal() d2 1}}3{{/rollTotal() d2 1}}
+		{{#rollTotal() d2 2}}4{{/rollTotal() d2 2}}
+		{{#rollTotal() d2 3}}5</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 3}}
+		{{#rollTotal() d2 4}}6</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 4}}
+		{{#rollTotal() d2 5}}7{{/rollTotal() d2 5}}
+		{{#rollTotal() d2 6}}8{{/rollTotal() d2 6}}
+	{{/rollTotal() d1 2}}
+	{{#rollTotal() d1 3}}
+		{{#rollTotal() d2 1}}4</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 1}}
+		{{#rollTotal() d2 2}}5</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 2}}
+		{{#rollTotal() d2 3}}6</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-lightning">Lightning Bolt{{/rollTotal() d2 3}}
+		{{#rollTotal() d2 4}}7</td></tr><tr><td class="sheet-template-special" data-i18n="roll-tie">Twist Tie{{/rollTotal() d2 4}}
+		{{#rollTotal() d2 5}}8</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 5}}
+		{{#rollTotal() d2 6}}9</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 6}}
+	{{/rollTotal() d1 3}}
+	{{#rollTotal() d1 4}}
+		{{#rollTotal() d2 1}}5</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 1}}
+		{{#rollTotal() d2 2}}6</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 2}}
+		{{#rollTotal() d2 3}}7</td></tr><tr><td class="sheet-template-special" data-i18n="roll-tie">Twist Tie{{/rollTotal() d2 3}}
+		{{#rollTotal() d2 4}}8</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-crazy">Crazy Eight{{/rollTotal() d2 4}}
+		{{#rollTotal() d2 5}}9</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 5}}
+		{{#rollTotal() d2 6}}10</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 6}}
+	{{/rollTotal() d1 4}}
+	{{#rollTotal() d1 5}}
+		{{#rollTotal() d2 1}}6{{/rollTotal() d2 1}}
+		{{#rollTotal() d2 2}}7{{/rollTotal() d2 2}}
+		{{#rollTotal() d2 3}}8</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 3}}
+		{{#rollTotal() d2 4}}9</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 4}}
+		{{#rollTotal() d2 5}}10{{/rollTotal() d2 5}}
+		{{#rollTotal() d2 6}}11{{/rollTotal() d2 6}}
+	{{/rollTotal() d1 5}}
+	{{#rollTotal() d1 6}}
+		{{#rollTotal() d2 1}}7{{/rollTotal() d2 1}}
+		{{#rollTotal() d2 2}}8{{/rollTotal() d2 2}}
+		{{#rollTotal() d2 3}}9</td></tr><tr><td class="sheet-template-special sheet-template-f" data-i18n="roll-knife">Twist the Knife{{/rollTotal() d2 3}}
+		{{#rollTotal() d2 4}}10</td></tr><tr><td class="sheet-template-special sheet-template-s" data-i18n="roll-fate">Twist of Fate{{/rollTotal() d2 4}}
+		{{#rollTotal() d2 5}}11{{/rollTotal() d2 5}}
+		{{#rollTotal() d2 6}}12{{/rollTotal() d2 6}}
+	{{/rollTotal() d1 6}}	
+	</td></tr>
+	</tbody>
+</table>
+</rolltemplate>

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Gudea&display=swap');
+
+label {
+	font-family: Gudea;
+	font-weight: 700;	
+}
+
+input,textarea {
+	width: 99%;
+	border: 0;
+	font-family: Gudea;		
+}
+
+.sheet-row,.sheet-slantrow,.sheet-4colrow {
+	margin-bottom: 10px;
+	background-color: white;
+}
+
+.sheet-4colrow .sheet-col {
+	width: calc(25% - 3px );
+}
+
+.sheet-background {
+	background-color: #e6e6e6;
+	padding: 15px 10px 10px 10px;	
+}
+
+.sheet-slantrow .sheet-col:nth-of-type(1) {
+	width: calc(100% - 145px);
+}
+.sheet-rolltemplate-overtheedge table {
+	width: 100%;
+	text-align: center;
+}
+.sheet-rolltemplate-overtheedge .sheet-template-header {
+	background-color: lightblue;	
+	text-align: center;
+}
+.sheet-rolltemplate-overtheedge .sheet-template-row {
+	padding: 5px 0px 10px 0px
+}
+.sheet-rolltemplate-overtheedge .sheet-template-total {
+	font-size: x-large;
+}
+.sheet-rolltemplate-overtheedge .sheet-template-f {
+	color: #730505;	
+}
+.sheet-rolltemplate-overtheedge .sheet-template-s {
+	color: #247305;	
+}
+.sheet-rolltemplate-overtheedge .sheet-template-special {
+	font-weight: bold;
+}
